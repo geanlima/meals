@@ -5,22 +5,17 @@ import 'package:meals/data/dammy_data.dart';
 class CategoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Vamos Cozinhar?'),
-      ),
-      body: GridView(
-        padding: const EdgeInsets.all(25),
+    return GridView(
+        padding: const EdgeInsets.all(20),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 200,
-          childAspectRatio: 3 / 2,
-          crossAxisSpacing: 20,
-          mainAxisSpacing: 20,
+          maxCrossAxisExtent: 150,
+          childAspectRatio: 1.75,
+          crossAxisSpacing: 15,
+          mainAxisSpacing: 15,
         ),
         children: DUMMY_CATEGORIES.map((cat) {
           return CategoryItem(cat);
         }).toList(),
-      ),
-    );
+      );
   }
 }
